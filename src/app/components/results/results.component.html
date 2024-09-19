@@ -1,0 +1,12 @@
+<div *ngIf="loading">Recherche en cours...</div>
+<div *ngIf="!loading && results">
+  <div class="stats">
+    <p>Temps d'exécution: {{executionTime}} ms</p>
+    <p>Total de résultats: {{totalResults}}</p>
+  </div>
+  <div class="results-list">
+    <div *ngFor="let result of results">
+      <pre>{{ result | json }}</pre>
+    </div>
+  </div>
+</div>
